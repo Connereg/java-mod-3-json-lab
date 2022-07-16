@@ -45,7 +45,7 @@ public class FileIORunner {
 
     }
 
-
+    // UNUSED METHOD FOR READING JSON
     public static Person readJson() throws IOException {
         Path filePath = Path.of("simple.data");
 
