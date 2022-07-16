@@ -34,6 +34,7 @@ public class FileIORunner {
 
         //READING JSON FROM SIMPLE.DATA FILE
         List<Person> restoredPersons = Arrays.asList(new ObjectMapper().readValue(new File("simple.json"), Person[].class));
+
         for ( Person person : restoredPersons) {
             Logger.getInstance().log(person.getFirstName() + " " + person.getLastName());
         }
@@ -47,7 +48,7 @@ public class FileIORunner {
 
     // UNUSED METHOD FOR READING JSON
     public static Person readJson() throws IOException {
-        Path filePath = Path.of("simple.data");
+        Path filePath = Path.of("simple.json");
 
         String content = Files.readString(filePath);
         ObjectMapper mapper = new ObjectMapper();
